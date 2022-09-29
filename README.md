@@ -34,9 +34,7 @@ victoriaAme <- 2.15
 
 ## Probabilidad implícita
 
-Usamos ‘/’ para dividir, ‘+’ sumar, ‘-’ restar, ’\*’ multiplicar. Nota
-que usamos el valor guardado en las variables anteriores para definir
-nuevas variables.
+Usamos ‘/’ para dividir, ‘+’ sumar, ‘-’ restar, ’\*’ multiplicar. 
 
 Recuerda que para calcular la probabilidad implícita de un momio en
 sistema europeo usamos **probabilidad implícita = 100/momio**.
