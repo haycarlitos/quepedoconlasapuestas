@@ -1,0 +1,54 @@
+---
+title: '¿Qué pedo con las apuestas?'
+author: '@haycarlitos'
+date: '2022-09-29'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Sin miedo al código
+
+Siempre recomiendo R para aprender a programar. Aunque la mayoría de usuarios lo usa para estadística, creo que puedes probar rápido cualquier tipo de experimento. Además, una vez que entiendes lo básico, es más fácil entender otros lenguajes de programación. Visita <http://rmarkdown.rstudio.com> para aprender a hacer documentos con código. 
+
+Si nunca has programado o no tienes instalado R, en 20 minutos estarás list@ para seguir hackeando siguiendo éste tutorial. <https://www.dataquest.io/blog/tutorial-getting-started-with-r-and-rstudio/>
+
+## Los momios
+
+Asignamos valores a variables usando '<-'. Si tecleas el nombre de alguna de ellas en la consola, imprime el número que le
+asignaste. El '#' al inicio de cada linea se usa para dejar comentarios.
+
+```{r variables}
+# Así se ve un comentario
+
+victoriaPuebla <- 3.2 
+
+empate <- 3.55
+
+victoriaAme <- 2.15 
+```
+
+## Probabilidad implícita
+
+Usamos '/' para dividir, '+' sumar, '-' restar, '*' multiplicar. Nota que usamos el valor guardado en las variables anteriores para definir nuevas variables. 
+
+Recuerda que para calcular la probabilidad implícita de un momio en sistema europeo usamos 
+**probabilidad implícita = 100/momio**.
+
+¿Ya notaste que en el denominador usamos las variables que asignamos arriba? Lo chido de esto es que cada variable
+que asignas la puedes ir reutilizando a lo largo del código. Si la casa cambia el momio de algún equipo, solo vas a la linea donde declaraste la variable y cambias el valor. En lenguaje godín, sería equivalente a fijar el valor de una celda en las fórmulas de Excel.
+```{r pressure, echo=TRUE}
+# Probabilidad impĺicita Puebla
+probImpPuebla <- 100 / victoriaPuebla 
+probImpPuebla
+# Probabilidad impĺicita Empate
+probImpEmpate <- 100 / empate
+probImpEmpate
+# Probabilidad impĺicita América
+probImpAme <- 100 / victoriaAme
+probImpAme
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
