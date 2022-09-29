@@ -38,6 +38,25 @@ probImpTotal
 spread <- probImpTotal - 100
 
 # En el post mencionamos que al revisar los datos, nos dimos cuenta
-# que el américa ahora tiene probabilidad del 60% de ganar. 
+# que el américa ahora tiene probabilidad del 60% de ganar.
 # Veamos que implíca esto:
 
+# datos
+#Usamos 'c()' para concatenar datos. Pongamos valores para Ganado (G), Perdido (P) y Empate (E).
+partidosAme <- c('G', 'E', 'E', 'G', 'G', 'G', 'G' ,'P', 'G', 'P')
+
+# Otra forma de contar es utilizando 'length()' que nos dira la longitud 
+# de un vector (así se le llama a los datos que juntamos con 'c()') y 'which()' 
+# que nos dira la posición que tiene un valor específico dentro de un vector empezando desde la posición 1.
+# Número de partidos en nuestro vector
+partidosJugadosAme <- length(partidosAme)
+partidosJugadosAme
+# Número de partidos ganados
+partidosGanadosAme <- length(which(partidosAme=='G'))
+partidosGanadosAme
+# Probabilidad real multiplicada por 100
+probRealAme <- (partidosGanadosAme / partidosJugadosAme) * 100
+probRealAme
+
+# Le preguntamos a R ¿La probabilidad real es mayor a la implícita?
+probRealAme > probImpAme

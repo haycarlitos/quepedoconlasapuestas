@@ -15,7 +15,7 @@ Siempre recomiendo R para aprender a programar. Aunque la mayoría de usuarios l
 
 Si nunca has programado o no tienes instalado R, en 20 minutos estarás list@ para seguir hackeando siguiendo éste tutorial. <https://www.dataquest.io/blog/tutorial-getting-started-with-r-and-rstudio/>
 
-## Los momios
+## Momios
 
 Asignamos valores a variables usando '<-'. Si tecleas el nombre de alguna de ellas en la consola, imprime el número que le
 asignaste. El '#' al inicio de cada linea se usa para dejar comentarios.
@@ -67,9 +67,9 @@ spread
 ```
 
 
-## Los datos
+## Datos
 
-En el post mencionamos que al revisar los datos, nos dimos cuenta que el América ahora tiene probabilidad del 60% de ganar. Por supuesto que no revise nada. No aún. En la parte 2 ya usaremos datos reales.
+En el post mencionamos que al revisar los datos, nos dimos cuenta que el América ahora tiene probabilidad del 60% de ganar. Por supuesto que no revise nada. No aún. En la parte 2 usaremos datos reales.
 
 Vamos a inventar los resultados de los últimos 10 partidos que jugó el América. De hecho los inventaré yo. Te toca investigar cómo hacerlo de forma aleatoria.
 Que flojera escribir partido por partido. Me mandas pull request <https://www.freecodecamp.org/espanol/news/como-hacer-tu-primer-pull-request-en-github/> cuando lo encuentres. Estaría muy chingón que contribuyeras al código.
@@ -84,6 +84,34 @@ Te la puse fácil con 10 partidos. De un vistazo puedes contar que ha ganado 6 p
 ¿Muy fácil, no? ¿Y si tuvieras que contar los partidos que ha jugado a lo largo de una decada?
 Tranqui, sale rápido si usamos 'table()'. Crea tablas de contingencia. Hágamoslo para que recuerdes que diablos eran esas tablas.
 ```{r table, echo=TRUE}
-partidosAme <- c('G', 'E', 'E', 'G', 'G', 'G', 'G' ,'P', 'G', 'P')
-partidosAme
+table(partidosAme)
 ```
+
+Otra forma de contar es utilizando 'length()' que nos dira la longitud de un vector (así se le llama a los datos que juntamos con 'c()') y 'which()' que nos dira la posición que tiene un valor específico dentro de un vector empezando desde la posición 1. 
+```{r probReal, echo=TRUE}
+# Número de partidos en nuestro vector
+partidosJugadosAme <- length(partidosAme)
+partidosJugadosAme
+# Número de partidos ganados
+partidosGanadosAme <- length(which(partidosAme=='G'))
+partidosGanadosAme
+# Probabilidad real multiplicada por 100
+probRealAme <- (partidosGanadosAme / partidosJugadosAme) * 100
+probRealAme
+```
+
+Ahora que ya tenemos un cálculo de la probabilidad basado en datos, comparemos con la probabilidad ímplicita para conocer si es apuesta de valor. Ya sé que eres muy crack y lo hiciste mentalmente. Lo bonito del código es que puedes reutilizarlo para analizar cualquier liga.
+
+Usaremos operadores relacionales <https://bookdown.org/jboscomendoza/r-principiantes4/operadores-relacionales.html> para comparar.
+
+Recuerda que **la única forma de ganar dinero a largo plazo en las apuestas es encontrando apuestas de valor. Dónde la probabilidad real es mayor a la probabilidad implícita.**
+```{r operadores, echo=TRUE}
+# Le preguntamos a R ¿La probabilidad real es mayor a la implícita?
+probRealAme > probImpAme
+```
+
+## FIN
+
+Espera, ¿Así de fácil? La gente pocas veces se toma el tiempo de pensar cómo funcionan las cosas. Si ya estás jugando a atinarle a lo incierto, pon los números de tu lado. Aunque los datos favorezcan a un equipo, cualquier cosa puede pasar  que cambie el resultado final. No obstante, las matemáticas te favorecen por mucho si encuentras éste tipo de apuestas. La verdadera mágia detrás de esto es que sin meternos en muchas mates, encontraste  **valor esperado positivo** <https://es.wikipedia.org/wiki/Esperanza_(matem%C3%A1tica)>. Calcularlo se sale del alcance de este post pero me encantaría ver tu pull request con tu código.
+
+Un último tip. Si tienes duda de cómo se usa una función, escribe '?' y te abrirá la documentación.
