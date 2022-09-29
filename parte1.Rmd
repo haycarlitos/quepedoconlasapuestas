@@ -38,8 +38,8 @@ Recuerda que para calcular la probabilidad implícita de un momio en sistema eur
 **probabilidad implícita = 100/momio**.
 
 ¿Ya notaste que en el denominador usamos las variables que asignamos arriba? Lo chido de esto es que cada variable
-que asignas la puedes ir reutilizando a lo largo del código. Si la casa cambia el momio de algún equipo, solo vas a la linea donde declaraste la variable y cambias el valor. En lenguaje godín, sería equivalente a fijar el valor de una celda en las fórmulas de Excel.
-```{r pressure, echo=TRUE}
+que asignas la puedes ir reutilizando a lo largo del código. Si la casa de apuestas cambia el momio de algún equipo, solo vas a la linea donde declaraste la variable y cambias el valor. En lenguaje godín, sería equivalente a fijar el valor de una celda en las fórmulas de Excel.
+```{r probImp, echo=TRUE}
 # Probabilidad impĺicita Puebla
 probImpPuebla <- 100 / victoriaPuebla 
 probImpPuebla
@@ -51,4 +51,10 @@ probImpAme <- 100 / victoriaAme
 probImpAme
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Sumando las probabilidades deberíamos obtener un número menor o igual a cien.
+probImpTotal <- probImpPuebla + probImpEmpate + probImpAme
+```{r probImpTotal, echo=TRUE}
+probImpTotal <- probImpPuebla + probImpEmpate + probImpAme
+probImpTotal
+```
+
