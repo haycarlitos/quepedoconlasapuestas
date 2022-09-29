@@ -191,7 +191,7 @@ las matemáticas te favorecen por mucho si encuentras éste tipo de
 apuestas. La verdadera mágia detrás de esto es que sin meternos en
 muchas mates, encontraste **valor esperado positivo**
 <https://es.wikipedia.org/wiki/Esperanza_(matem%C3%A1tica)>. Calcularlo
-se sale del alcance de este post pero me encantaría ver tu pull request
+se sale del alcance de este post pero me encantaría ver un pull request
 con tu código.
 
 Un último tip. Si tienes duda de cómo se usa una función, escribe ‘?’ y
