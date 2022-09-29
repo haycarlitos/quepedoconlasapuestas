@@ -2,7 +2,7 @@
 title: '¿Qué pedo con las apuestas?'
 author: '@haycarlitos'
 date: '2022-09-29'
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
