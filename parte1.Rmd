@@ -52,9 +52,38 @@ probImpAme
 ```
 
 Sumando las probabilidades deberíamos obtener un número menor o igual a cien.
-probImpTotal <- probImpPuebla + probImpEmpate + probImpAme
 ```{r probImpTotal, echo=TRUE}
 probImpTotal <- probImpPuebla + probImpEmpate + probImpAme
 probImpTotal
 ```
 
+## Spread
+
+El excedente de 100 es la ganancia de la casa de apuestas.
+Para calcularlo restamos la probabilidad total de un evento seguro (100).
+```{r spread, echo=TRUE}
+spread <- probImpTotal - 100
+spread
+```
+
+
+## Los datos
+
+En el post mencionamos que al revisar los datos, nos dimos cuenta que el América ahora tiene probabilidad del 60% de ganar. Por supuesto que no revise nada. No aún. En la parte 2 ya usaremos datos reales.
+
+Vamos a inventar los resultados de los últimos 10 partidos que jugó el América. De hecho los inventaré yo. Te toca investigar cómo hacerlo de forma aleatoria.
+Que flojera escribir partido por partido. Me mandas pull request <https://www.freecodecamp.org/espanol/news/como-hacer-tu-primer-pull-request-en-github/> cuando lo encuentres. Estaría muy chingón que contribuyeras al código.
+
+Usamos 'c()' para concatenar datos. Pongamos valores para Ganado (G), Perdido (P) y Empate (E).
+```{r datos, echo=TRUE}
+partidosAme <- c('G', 'E', 'E', 'G', 'G', 'G', 'G' ,'P', 'G', 'P')
+partidosAme
+```
+
+Te la puse fácil con 10 partidos. De un vistazo puedes contar que ha ganado 6 partidos de los 10 que ha jugado. Eso nos hace pensar que la probabilidad de victoria para el América es del 60%. 
+¿Muy fácil, no? ¿Y si tuvieras que contar los partidos que ha jugado a lo largo de una decada?
+Tranqui, sale rápido si usamos 'table()'. Crea tablas de contingencia. Hágamoslo para que recuerdes que diablos eran esas tablas.
+```{r table, echo=TRUE}
+partidosAme <- c('G', 'E', 'E', 'G', 'G', 'G', 'G' ,'P', 'G', 'P')
+partidosAme
+```
