@@ -10,7 +10,8 @@ usuarios lo usa para estadística, creo que puedes probar rápido
 cualquier tipo de experimento. Además, una vez que entiendes lo básico,
 es más fácil entender otros lenguajes de programación. Visita
 <http://rmarkdown.rstudio.com> para aprender a hacer documentos con
-código.
+código. Para que se viera bonito lo hice con markdown. Te incluí el archivo
+.R por si solo quieres usar el script.
 
 Si nunca has programado o no tienes instalado R, en 20 minutos estarás
 list@ para seguir hackeando siguiendo éste tutorial.
