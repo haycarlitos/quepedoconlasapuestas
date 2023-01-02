@@ -2,7 +2,7 @@
 ================
 @haycarlitos
 2022-09-29
-
+Código del post: https://medium.com/@diosplan/que-pedo-con-las-apuestas-parte-1-4dd56411946b
 ## Sin miedo al código
 
 Siempre recomiendo R para aprender a programar. Aunque la mayoría de
